@@ -2,7 +2,7 @@
 
 :root {
     --main-background-color: #f3fae1;
-    --secondary-background-color: #00f59b;
+    --secondary-background-color: #ae89f8;
     --main-text-color: #333;
     --secondary-text-color: #fff;
     --third-text-color: #5743f0;
@@ -90,7 +90,6 @@ h1>span {
 
 .about-me {
     background-color: var(--secondary-background-color);
-    position: absolute;
     width: 100%;
     padding: 25px 0;
 }
@@ -107,8 +106,8 @@ h1>span {
 }
 
 .about-me__path span {
-    color: var(--third-text-color);
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .about-me__content {
@@ -154,4 +153,88 @@ h1>span {
     color: var(--third-text-color);
     font-weight: 700;
     font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+
+/* --- ABOUT ME --- */
+
+.projects {
+    background-color: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+}
+
+.projects__container {
+    width: var(--main-width);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, auto));
+    grid-auto-rows: auto;
+    gap: 30px;
+}
+
+.project {
+    background-color: var(--main-background-color);
+    filter: brightness(1.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 5px 5px 0 var(--third-text-color);
+    gap: 20px;
+}
+
+.projects__container {
+    margin: 35px 0;
+}
+
+.project>.img-container {
+    width: 100%;
+}
+
+.project>.img-container>img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.project .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.project .text-container h3 {
+    color: var(--third-text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.project .text-container p {
+    line-height: ;
+}
+
+.contact {
+    background-color: var(--secondary-background-color);
+    width: 100%;
+    padding: 25px 0;
+}
+
+.contact__container {
+    width: var(--main-width);
+    margin: auto;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact__container>form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
