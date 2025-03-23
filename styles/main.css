@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     font-family: "Inter";
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .floating {
@@ -39,9 +40,59 @@
     animation: entry-top 0.75s ease;
 }
 
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    z-index: 2000;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #cf660b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    right: 10%;
+    bottom: 15%;
+    box-shadow: inset -8px -4px 0px 0px #fff000;
+    background: transparent;
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #522ba7;
+}
+
+input:not(:checked) + .slider:before {
+    transform: translateX(-100%);
+    box-shadow: inset -15px -4px 0px 15px #fff000;
+}
+
 .navbar>ul {
     background-color: var(--secondary-text-color);
-    width: 40%;
+    width: 50%;
     height: 120%;
     top: -20px;
     padding-top: 20px;
@@ -61,6 +112,14 @@
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.navbar>ul>li:last-child {
+    padding: 0 20px;
+}
+
+.navbar>ul>li:last-child:hover::before {
+    display: none;
 }
 
 .navbar li>a {
@@ -149,6 +208,7 @@ h1 {
     font-weight: 500;
     width: 100%;
     animation: entry-right 0.75s ease;
+    color: var(--main-text-color);
 }
 
 h1>span {
@@ -168,6 +228,7 @@ h1>span {
 
 .text__description>p {
     background: var(--main-background-color);
+    color: var(--main-text-color);
     filter: brightness(1.5);
     padding: 20px;
     border-radius: 15px;
@@ -225,6 +286,7 @@ h1>span {
 }
 
 .about-me__content {
+    color: var(--main-text-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -327,6 +389,7 @@ h1>span {
 }
 
 .project {
+    color: var(--main-text-color);
     background-color: var(--main-background-color);
     filter: brightness(1.5);
     border-radius: 20px;
@@ -361,10 +424,6 @@ h1>span {
     color: var(--third-text-color);
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-.project .text-container p {
-    line-height: ;
 }
 
 
@@ -414,7 +473,7 @@ h1>span {
 }
 
 .contact__container>form>button {
-    background-color: var(--main-text-color);
+    background-color: #333;
     color: var(--secondary-text-color);
     font-size: 1rem;
     transition: box-shadow 0.2s ease;
@@ -429,6 +488,7 @@ footer {
 }
 
 .footer-container {
+    color: var(--main-text-color);
     width: 80%;
     margin: auto;
     padding: 25px;
