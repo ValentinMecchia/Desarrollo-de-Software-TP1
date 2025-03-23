@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <header></header>
     <main>
-        <section class="presentation-container">
+        <section class="presentation-container" id="presentation">
             <div class="presentation-container__content">
                 <div class="content__img-container">
                     <img src="images/Geronimo_Benavides_profile.jpg" alt="profile-image">
@@ -18,13 +19,13 @@
                         <span>Gerónimo Benavides</span> <br>
                         desarrollador web con +15 años de experiencia</h1>
                     <article class="text__description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatem sit earum, incidunt ipsam eum minima dignissimos blanditiis eaque enim quas minus odio repellendus harum quae ratione consectetur soluta autem.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet perferendis totam est. Adipisci repellat laudantium eius atque vel sapiente numquam? Perferendis voluptas explicabo rerum possimus ex eveniet reiciendis consectetur commodi?</p>
+                        <p class="description__p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatem sit earum, incidunt ipsam eum minima dignissimos blanditiis eaque enim quas minus odio repellendus harum quae ratione consectetur soluta autem.</p>
+                        <p class="description__p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet perferendis totam est. Adipisci repellat laudantium eius atque vel sapiente numquam? Perferendis voluptas explicabo rerum possimus ex eveniet reiciendis consectetur commodi?</p>
                     </article>
                 </div>
             </div>
         </section>
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <div class="about-me__path">
                 <h2>Un poco <span>sobre mi...</span></h2>
                 <div class="about-me__content">
@@ -52,75 +53,80 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
-            <div class="projects__container">
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="img-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
-                    </div>
-                    <div class="text-container">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
-                    </div>
-                </article>
+        <section class="projects" id="projects">
+            <div class="projects-path">
+                <h2>Algunos de los <span>proyectos</span> en los que participé</h2>
+                <div class="projects__container">
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7xJ4bNPYQdlYQAys7Sl8WMhA-uQ8NEVpZg&s" alt="">
+                        </div>
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sit accusamus magnam dolorem! Cumque natus magni harum dignissimos ad. Dicta doloribus ab architecto fuga error repellendus mollitia id voluptate! Voluptate.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact__container">
                 <h2>Contáctame</h2>
-                <form action="">
+                <form action="" id="contact-form">
                     <input type="text" placeholder="Nombre">
                     <input type="email" placeholder="Email">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>Enviar</button>
+                    <button id="send-button">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
+    <footer></footer>
+    <script src="code.js"></script>
 </body>
 </html>
