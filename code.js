@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (event.target.checked) {
                     document.documentElement.style.setProperty("--main-background-color", "#3c3e37");
                     document.documentElement.style.setProperty("--secondary-background-color", "#6335bf");
-                    document.documentElement.style.setProperty("--main-text-color", "#ddd");
-                    document.documentElement.style.setProperty("--secondary-text-color", "#fff");
-                    document.documentElement.style.setProperty("--third-text-color", "#5743f0");
+                    document.documentElement.style.setProperty("--main-text-color", "#eee");
+                    document.documentElement.style.setProperty("--secondary-text-color", "#555");
+                    document.documentElement.style.setProperty("--third-text-color", "#2dd017");
                     document.querySelector(".links-container").style.filter = "invert(1)";
                 } else {
                     document.documentElement.style.setProperty("--main-background-color", "#f3fae1");
@@ -53,26 +53,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadSections();
 
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async function(event) {
         event.preventDefault();
-        const form = event.target;
-        const data = new FormData(form);
-        const formData = new URLSearchParams(data).toString();
 
-        fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(response => {
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
             if (response.ok) {
+                alert('Mensaje enviado con éxito!');
                 form.reset();
-                alert("Mensaje enviado correctamente");
             } else {
-                alert("Error al enviar el mensaje");
+                alert('Hubo un error al enviar el mensaje.');
             }
-        });
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Hubo un error al enviar el mensaje.');
+        }
     });
 
     document.getElementById("send-button").addEventListener("mousedown", function() {
